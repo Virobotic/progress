@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            justify-content: center;
+            align-content: center;
+            margin-top: 60px;
+            font-family: Arial, sans-serif;
+        }
+        button{
+            margin: 20px;
+            padding: 10px 24px;
+            border: none;
+            border-radius: 20px;
+            color: aliceblue;
+            font-size: 16px;
+            background-color: rgb(224, 141, 33);
+            cursor: pointer;
+        }
+        h1{
+            background-color: rgb(226, 252, 155);
+            height: 50px;
+            width: 260px;
+            display: block;
+            margin: 0 auto 18px;
+            padding: 10px;
+            border-radius: 10px;
+            line-height: 28px;
+            font-size: 18px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        input[type="text"]{
+            padding:8px 10px;
+            border-radius:6px;
+            border:1px solid #ccc;
+            font-size:16px;
+        }
+        form { display: inline-block; }
+    </style>
+</head>
+<body>
+    <h1 id="name">Welcome</h1>
+
+    <!-- input form to set visitor name -->
+    <form id="nameForm" autocomplete="off" aria-label="Set your name">
+        <input type="text" id="demo" name="demo" placeholder="Insert Name" aria-label="Name">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const nameEl = document.getElementById('name');
+      const input = document.getElementById('demo');
+      const form = document.getElementById('nameForm');
+
+      // load saved name if any
+      const saved = localStorage.getItem('visitorName');
+      if (saved) nameEl.textContent = saved;
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const val = input.value.trim();
+        if (!val) return;
+        nameEl.textContent = val;
+        localStorage.setItem('visitorName', val);
+        input.value = '';
+      });
+    });
+    </script>
+</body>
+</html>

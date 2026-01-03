@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Levite Worship | Excellence in Service</title>
+    <link rel="stylesheet" href="images.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav class="navbar">
+       <div class="brand">
+        <div class="logo">
+          <img src="pic/logo.png" alt="">
+        </div>
+        <div>
+          <h1>Levite Family</h1>
+          <div class="muted" style="font-size:0.82rem">Gospel Group — Worship & Ministry</div>
+        </div>
+        <button class="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="lev.html">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-overlay">
+            <h1 class="reveal">The Heart of a Levite</h1>
+            <p class="reveal">Dedicated to the Art of Worship</p>
+            <div class="scroll-indicator"></div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <div class="section-header">
+            <h2 class="reveal">Our Ministry Sections</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="vocalists">Vocalists</button>
+                <button class="filter-btn" data-filter="instrumentalists">Instrumentalists</button>
+                <button class="filter-btn" data-filter="media">Media & Tech</button>
+                <button class="filter-btn" data-filter="ushers">Ushers & Greeters</button>
+                <button class="filter-btn" data-filter="bts">Behind the Scenes</button>
+            </div>
+        </div>
+
+        <div class="gallery-grid" id="gallery-grid">
+            <!-- Vocalists: leader feature + 10 images -->
+            <div class="gallery-item reveal leader-feature" data-category="vocalists">
+                <div class="image-wrapper">
+                    <img src="pic/vocalist/vocal1 big senate.jpeg" alt="Vocalists Leader">
+                    <div class="caption">Big Senate</div>
+                </div>
+            </div>
+            <!-- cycle local images and unsplash placeholders -->
+            <div class="gallery-item reveal" data-category="vocalists">
+                <div class="image-wrapper">
+                    <img src="pic/vocalist/vocal2 sharon bulus.jpeg" alt="Vocalist 1">
+                    <div class="caption">Sharon Bulus</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="vocalists">
+                <div class="image-wrapper">
+                    <img src="pic/vocalist/vocal3 chioma.jpeg" alt="Vocalist 2">
+                    <div class="caption">Chioma</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="vocalists">
+                <div class="image-wrapper">
+                    <img src="pic/vocalist/vocal4 simnom love.jpeg" alt="Vocalist 3">
+                    <div class="caption">Simnom Love</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="vocalists">
+                <div class="image-wrapper">
+                    <img src="pic/vocalist/vocal5 grace.jpeg"
+                        alt="Vocalist 4">
+                    <div class="caption">Grace</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="vocalists">
+                <div class="image-wrapper">
+                    <img src="pic/dance.jpeg"
+                        alt="Vocalist 5">
+                    <div class="caption">Vocalist 5</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="vocalists">
+                <div class="image-wrapper">
+                    <img src="pic/worship1.jfif" alt="Vocalist 6">
+                    <div class="caption">Vocalist 6</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="vocalists">
+                <div class="image-wrapper">
+                    <img src="pic/worsh2.jfif" alt="Vocalist 7">
+                    <div class="caption">Vocalist 7</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="vocalists">
+                <div class="image-wrapper">
+                    <img src="pic/worsh3.jfif" alt="Vocalist 8">
+                    <div class="caption">Vocalist 8</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="vocalists">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80"
+                        alt="Vocalist 9">
+                    <div class="caption">Vocalist 9</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="vocalists">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80"
+                        alt="Vocalist 10">
+                    <div class="caption">Vocalist 10</div>
+                </div>
+            </div>
+
+            <!-- Instrumentalists: 10 images -->
+            <!-- <div class="gallery-item reveal" data-category="instrumentalists">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=600&q=80"
+                        alt="Instrumentalist 1">
+                    <div class="caption">Instrumentalist 1</div>
+                </div>
+            </div> -->
+            <!-- Instrumentalists leader feature -->
+            <div class="gallery-item reveal leader-feature" data-category="instrumentalists">
+                <div class="image-wrapper">
+                    <img src="pic/dan2.jpeg" alt="Instrumentalists Leader">
+                    <div class="caption">Instrumentalists Leader </div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="instrumentalists">
+                <div class="image-wrapper">
+                    <img src="pic/instrumentalist/instru 2.jpeg" alt="Instrumentalist 2">
+                    <div class="caption">Sticks</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="instrumentalists">
+                <div class="image-wrapper">
+                    <img src="pic/instrumentalist/instru 3.jpeg" alt="Instrumentalist 3">
+                    <div class="caption">Kruise</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="instrumentalists">
+                <div class="image-wrapper">
+                    <img src="pic/instrumentalist/instru 4.jpeg" alt="Instrumentalist 4">
+                    <div class="caption">Drums</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="instrumentalists">
+                <div class="image-wrapper">
+                    <img src="pic/instrumentalist/instru 5 pianist.jpeg"
+                        alt="Instrumentalist 5">
+                    <div class="caption">Pianist</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="instrumentalists">
+                <div class="image-wrapper">
+                    <img src="pic/instrumentalist/instru 6 dee keyz.jpeg"
+                        alt="Instrumentalist 6">
+                    <div class="caption">Dee Keyz</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="instrumentalists">
+                <div class="image-wrapper">
+                    <img src="pic/worship1.jfif" alt="Instrumentalist 7">
+                    <div class="caption">Instrumentalist 7</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="instrumentalists">
+                <div class="image-wrapper">
+                    <img src="pic/worsh2.jfif" alt="Instrumentalist 8">
+                    <div class="caption">Instrumentalist 8</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="instrumentalists">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1526178615827-8d4b7b92f9d4?auto=format&fit=crop&w=600&q=80"
+                        alt="Instrumentalist 9">
+                    <div class="caption">Instrumentalist 9</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="instrumentalists">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1517511620798-cec17d428bc0?auto=format&fit=crop&w=600&q=80"
+                        alt="Instrumentalist 10">
+                    <div class="caption">Instrumentalist 10</div>
+                </div>
+            </div>
+
+            <!-- removed standalone Leaders section; leader now shown as feature in each section -->
+
+            <!-- Media: 10 images -->
+            <!-- Media leader feature -->
+            <div class="gallery-item reveal leader-feature" data-category="media">
+                <div class="image-wrapper">
+                    <img src="pic/virobotics.jpg" alt="Media Leader">
+                    <div class="caption">Media Leader</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="media">
+                <div class="image-wrapper">
+                    <img src="pic/vince 4.jpg"
+                        alt="Media 1">
+                    <div class="caption">Virobotics</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="media">
+                <div class="image-wrapper">
+                    <img src="pic/media/instru 3.jpeg" alt="Media 2">
+                    <div class="caption">Hue's</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="media">
+                <div class="image-wrapper">
+                    <img src="pic/worsh2.jfif" alt="Media 3">
+                    <div class="caption">Media 3</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="media">
+                <div class="image-wrapper">
+                    <img src="pic/worsh3.jfif" alt="Media 4">
+                    <div class="caption">Media 4</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="media">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1526178615827-8d4b7b92f9d4?auto=format&fit=crop&w=600&q=80"
+                        alt="Media 5">
+                    <div class="caption">Media 5</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="media">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1517511620798-cec17d428bc0?auto=format&fit=crop&w=600&q=80"
+                        alt="Media 6">
+                    <div class="caption">Media 6</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="media">
+                <div class="image-wrapper">
+                    <img src="pic/worship1.jfif" alt="Media 7">
+                    <div class="caption">Media 7</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="media">
+                <div class="image-wrapper">
+                    <img src="pic/worsh2.jfif" alt="Media 8">
+                    <div class="caption">Media 8</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="media">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80"
+                        alt="Media 9">
+                    <div class="caption">Media 9</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="media">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80"
+                        alt="Media 10">
+                    <div class="caption">Media 10</div>
+                </div>
+            </div>
+
+            <!-- Ushers: 10 images -->
+            <!-- Ushers leader feature -->
+            <div class="gallery-item reveal leader-feature" data-category="ushers">
+                <div class="image-wrapper">
+                    <img src="pic/ushers/ushers.jpeg" alt="Ushers Leader">
+                    <div class="caption">Ushers</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="ushers">
+                <div class="image-wrapper">
+                    <img src="pic/ushers/usher 2.jpeg" alt="Usher 1">
+                    <div class="caption">Sylvia</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="ushers">
+                <div class="image-wrapper">
+                    <img src="pic/worsh2.jfif" alt="Usher 2">
+                    <div class="caption">Usher 2</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="ushers">
+                <div class="image-wrapper">
+                    <img src="pic/worship1.jfif" alt="Usher 3">
+                    <div class="caption">Usher 3</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="ushers">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=600&q=80"
+                        alt="Usher 4">
+                    <div class="caption">Usher 4</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="ushers">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1492619339914-8833e00310e4?auto=format&fit=crop&w=600&q=80"
+                        alt="Usher 5">
+                    <div class="caption">Usher 5</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="ushers">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=600&q=80"
+                        alt="Usher 6">
+                    <div class="caption">Usher 6</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="ushers">
+                <div class="image-wrapper">
+                    <img src="pic/worship1.jfif" alt="Usher 7">
+                    <div class="caption">Usher 7</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="ushers">
+                <div class="image-wrapper">
+                    <img src="pic/worsh2.jfif" alt="Usher 8">
+                    <div class="caption">Usher 8</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="ushers">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1526178615827-8d4b7b92f9d4?auto=format&fit=crop&w=600&q=80"
+                        alt="Usher 9">
+                    <div class="caption">Usher 9</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal" data-category="ushers">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1517511620798-cec17d428bc0?auto=format&fit=crop&w=600&q=80"
+                        alt="Usher 10">
+                    <div class="caption">Usher 10</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img src="" alt="" id="lightbox-img">
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="wrap">
+            <h2>Contact Us</h2>
+            <p class="muted">Questions, signups or media inquiries — drop us a message.</p>
+            <form class="form" action="#" method="post">
+                <input type="text" name="name" placeholder="Your name" required>
+                <input type="email" name="email" placeholder="Your email" required>
+                <textarea name="message" rows="5" placeholder="Message" required></textarea>
+                <button class="submit" type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // 1. Reveal Animations on Scroll
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // 2. Filter Logic
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                        setTimeout(() => item.style.opacity = '1', 10);
+                    } else {
+                        item.style.opacity = '0';
+                        setTimeout(() => item.style.display = 'none', 400);
+                    }
+                });
+            });
+        });
+
+        // 3. Lightbox Logic
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close-lightbox');
+
+        document.querySelectorAll('.gallery-item img').forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = img.src;
+            });
+        });
+
+        lightbox.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        // 4. Mobile nav hamburger toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('is-active');
+                navLinks.classList.toggle('open');
+            });
+            // close nav when a link is clicked (mobile)
+            navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                hamburger.classList.remove('is-active');
+            }));
+        }
+    </script>
+</body>
+
+</html>

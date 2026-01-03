@@ -1,0 +1,387 @@
+:root {
+  --bg: #0b0b0f;
+  --panel: rgba(255, 255, 255, 0.04);
+  --muted: #c9c6c0;
+  --accent: #d8c59a;
+  --accent-2: #f7e9c9;
+  --glass: rgba(255, 255, 255, 0.06);
+  --radius: 14px;
+  --maxwidth: 1100px;
+}
+
+* {
+  box-sizing: border-box
+}
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(216, 197, 154, 0.06), transparent),
+    linear-gradient(180deg, #07070a 0%, #0b0b0f 100%);
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.45;
+}
+
+/* Page container */
+.wrap {
+  max-width: var(--maxwidth);
+  margin: 0 auto;
+  padding: 28px
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px
+}
+
+.logo img {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent), #b99e6a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111;
+  font-weight: 700;
+  box-shadow: 0 8px 30px rgba(216, 197, 154, 0.12) inset
+}
+
+.brand h1 {
+  font-size: 1.05rem;
+  margin: 0;
+  color: var(--accent-2);
+  letter-spacing: 0.6px
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 0.95rem;
+  animation: 0.5s;
+}
+
+nav a:hover {
+  transform: scale(1.1);
+  color: var(--accent-2)
+}
+
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 460px;
+  gap: 40px;
+  align-items: center;
+  padding: 28px 0
+}
+
+.hero-copy h2 {
+  font-size: 2.4rem;
+  margin: 0;
+  color: var(--accent-2);
+  line-height: 1.02
+}
+
+.hero-copy p {
+  color: var(--muted);
+  margin-top: 12px;
+  max-width: 60ch
+}
+
+.hero-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px
+}
+
+.btn {
+  padding: 12px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, var(--accent), #cdb57b);
+  color: #0b0b0f
+}
+
+.btn-ghost {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--accent-2);
+  background: transparent
+}
+
+/* 3D hero box */
+.stage {
+  width: 100%;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px
+}
+
+.stage-inner {
+  width: 340px;
+  height: 340px;
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out
+}
+
+/* cross logo constructed of two bars */
+.cross {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.98
+}
+
+.bar {
+  position: absolute;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(216, 197, 154, 0.12);
+  border-radius: 8px
+}
+
+.bar.vert {
+  width: 36px;
+  height: 200px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.bar.horz {
+  width: 180px;
+  height: 36px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%)
+}
+
+/* decorative ring */
+.ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  border: 2px solid rgba(216, 197, 154, 0.08);
+  backdrop-filter: blur(6px)
+}
+
+/* glow layers */
+.glow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  filter: blur(26px);
+  opacity: 0.16;
+  background: radial-gradient(circle at 30% 30%, rgba(216, 197, 154, 0.8), transparent 20%), radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.9), transparent 12%)
+}
+
+/* floating animation */
+.stage-inner {
+  animation: float 6s ease-in-out infinite
+}
+
+@keyframes float {
+  0% {
+    transform: translateZ(0) rotateX(8deg) rotateY(0deg)
+  }
+
+  50% {
+    transform: translateZ(20px) rotateX(12deg) rotateY(6deg)
+  }
+
+  100% {
+    transform: translateZ(0) rotateX(8deg) rotateY(0deg)
+  }
+}
+
+/* Content sections */
+section.content {
+  margin-top: 36px;
+  padding: 36px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.03)
+}
+
+.cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 18px
+}
+
+.card {
+  background: var(--glass);
+  padding: 18px;
+  border-radius: 12px
+}
+
+.card h3 {
+  margin: 0 0 8px 0;
+  color: var(--accent-2)
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 0.95rem
+}
+
+/* Events */
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px
+}
+
+.evt {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent)
+}
+
+.evt-date {
+  min-width: 84px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: rgba(216, 197, 154, 0.12);
+  color: var(--accent-2);
+  font-weight: 700
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px
+}
+
+.gallery img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block
+}
+
+/* Contact / Join */
+.form {
+  display: grid;
+  gap: 10px
+}
+
+input,
+textarea {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 10px;
+  border-radius: 8px;
+  color: var(--accent-2)
+}
+
+.submit {
+  padding: 10px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #0b0b0b;
+  border: none;
+  font-weight: 700
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  padding: 28px 0;
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.95rem
+}
+
+/* Responsive */
+@media (max-width:1000px) {
+  .hero {
+    grid-template-columns: 1fr 360px
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr)
+  }
+}
+
+@media (max-width:820px) {
+  .wrap {
+    padding: 18px
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 28px
+  }
+
+  .stage {
+    height: 360px
+  }
+
+  .stage-inner {
+    width: 300px;
+    height: 300px
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr)
+  }
+
+  nav a {
+    margin-left: 12px
+  }
+}
+
+@media (max-width:480px) {
+  header {
+    padding: 12px 18px
+  }
+
+  .logo {
+    width: 48px;
+    height: 48px
+  }
+
+  .hero-copy h2 {
+    font-size: 1.5rem
+  }
+
+  .gallery img {
+    height: 110px
+  }
+}

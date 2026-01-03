@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Levite Family | Gospel Group</title>
+  <link rel="stylesheet" href="lev.css">
+  <meta name="description" content="Levite Family - Gospel." />
+
+  <style>
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-toggle {
+      display: none;
+      background: transparent;
+      border: 0;
+      width: 44px;
+      height: 44px;
+      padding: 8px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .nav-toggle .hamb {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: currentColor;
+      position: relative;
+      transition: transform .2s ease;
+    }
+
+    .nav-toggle .hamb::before,
+    .nav-toggle .hamb::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: currentColor;
+      transition: transform .2s ease, top .2s ease, opacity .2s;
+    }
+
+    .nav-toggle .hamb::before {
+      top: -7px;
+    }
+
+    .nav-toggle .hamb::after {
+      top: 7px;
+    } 
+
+
+    .nav-links {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: inherit;
+      padding: 8px 6px;
+    }
+
+    @media (max-width: 720px) {
+      .nav-toggle {
+        display: flex;
+        color: azure;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 64px;
+        right: 12px;
+        background: var(--card-bg, rgba(0, 0, 0, 0.75));
+        backdrop-filter: blur(6px);
+        border-radius: 10px;
+        padding: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        min-width: 180px;
+        transform-origin: top right;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        display: none;
+        z-index: 90;
+      }
+
+      .nav-links a {
+        padding: 10px 14px;
+        width: 100%;
+        display: block;
+      }
+
+      nav.open .nav-links {
+        display: flex;
+      }
+
+      nav.open .nav-toggle .hamb {
+        transform: rotate(45deg);
+      }
+
+      nav.open .nav-toggle .hamb::before {
+        transform: rotate(90deg);
+        top: 0;
+      }
+
+      nav.open .nav-toggle .hamb::after {
+        opacity: 0;
+      }
+
+      .lrap {
+        grid-template-columns: 1fr !important;
+        grid-auto-rows: auto;
+        gap: 14px;
+      }
+
+      .lrap>#join {
+        order: 2;
+      }
+
+      .lrap>div:first-child {
+        order: 1;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .cc {
+        display: none;
+      }
+
+      #cdStatus {
+        display: none;
+      }
+
+      .cols {
+        display: flex;
+        justify-content: center;
+      }
+    } 
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">
+          <img src="pic/logo.png" alt="">
+        </div>
+        <div>
+          <h1>Levite Family</h1>
+          <div class="muted" style="font-size:0.82rem">Gospel Group — Worship & Ministry</div>
+        </div>
+      </div>
+
+      <!-- toggle + nav-links -->
+      <nav id="mainNavWrap" aria-label="Main navigation">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Open menu">
+          <span class="hamb" aria-hidden="true"></span>
+        </button>
+
+        <div id="mainNav" class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#events">Performance/Event</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+          <a href="#join">Join Us</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <main id="home" class="hero">
+      <div class="hero-copy">
+        <h2>Levite Family — a house of worship in song</h2>
+        <p>We are Levite Family, bringing heartfelt gospel music, worship nights and community performances. Join us for
+          powerful testimony through music — see upcoming events and learn how to partner or join the choir.</p>
+
+        <div class="hero-actions">
+          <a href="#events" class="btn btn-primary">See Performances</a>
+          <a href="#about" class="btn btn-ghost">Our Story</a>
+        </div>
+
+        <!-- COUNTDOWN: upcoming program in January -->
+        <div id="countdownCard" class="countdown" data-target="2026-01-15T10:00:00"
+          style="margin-top:18px;padding:14px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);display:flex;align-items:center;gap:14px;max-width:520px">
+          <div
+            style="flex:0 0 72px;height:72px;border-radius:8px;background:var(--accent-2);color:var(--bg);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.05rem">
+            Jan</div>
+          <div style="flex:1">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div>
+                <div style="font-weight:700">Community Outreach Concert</div>
+                <div class="muted" style="font-size:0.9rem;margin-top:4px">Jan 15, 2026 • Kaduna</div>
+              </div>
+              <div id="cdStatus" class="muted" style="font-size:0.85rem;">Event starts in</div>
+            </div>
+
+            <div id="cdTimer" style="margin-top:10px;display:flex;gap:8px;font-weight:700;font-size:0.95rem">
+              <div><span id="cdDays">0</span>d</div>
+              <div><span id="cdHours">0</span>h</div>
+              <div><span id="cdMins">0</span>m</div>
+              <div><span id="cdSecs">0</span>s</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:18px;display:flex;gap:10px;color:var(--muted);font-size:0.95rem">
+          <div>Based in Nigeria</div>
+          <div>•</div>
+          <div>Available for bookings</div>
+        </div>
+      </div>
+
+      <div class="stage" aria-hidden="true">
+        <div class="stage-inner" id="stageInner">
+          <div class="glow"></div>
+          <div class="ring"></div>
+          <div class="cross" id="cross">
+            <div class="bar vert" style="transform: translate(-50%,-50%) translateZ(12px)"></div>
+            <div class="bar horz" style="transform: translate(-50%,-50%) translateZ(6px)"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ABOUT -->
+    <section id="about" class="content">
+      <div class="wrap" style="max-width:var(--maxwidth);padding:0">
+        <h2 style="margin:0;color:var(--accent-2)">About Levite Family</h2>
+        <p class="muted" style="margin-top:10px;max-width:70ch">
+          Levite Family is a gospel ensemble formed to lead worship and uplift communities through heartfelt songs and
+          ministry. We combine traditional hymns with contemporary arrangements to create an atmosphere of praise
+          suitable for churches, events and festivals.</p>
+
+        <div class="cols">
+          <div class="card">
+            <h3>Our Mission</h3>
+            <p class="muted">To worship God through music,
+              disciple listeners, and use songs to bring hope and restoration.</p>
+          </div>
+
+          <div class="card">
+            <h3>Our Vision</h3>
+            <p class="muted">To be a household name in gospel music that ministers to generations.</p>
+          </div>
+
+          <div class="card cc">
+            <h3>Core Values</h3>
+            <p class="muted">Integrity • Worship • Community • Excellence</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENTS -->
+    <section id="events" class="content">
+      <div class="wrap" style="padding:0">
+        <h2 style="color:var(--accent-2)">Performance / Event</h2>
+        <p class="muted" style="margin-top:8px">
+          Upcoming performances and past highlights. Levite Family for your event.</p>
+
+        <div class="events-list" style="margin-top:16px">
+          <div class="evt">
+            <div class="evt-date">Nov 09<br><small style="font-weight:500">2025</small></div>
+            <div>
+              <strong>Levite 001</strong>
+              <div class="muted" style="font-size:0.9rem">Kaduna — Ecwa English Service Bagado</div>
+            </div>
+          </div>
+
+          <div class="evt">
+            <div class="evt-date">Dec 20<br><small style="font-weight:500">2025</small></div>
+            <div>
+              <strong>Levite 002</strong>
+              <div class="muted" style="font-size:0.9rem">Kaduna — Ecwa English Service Bagado</div>
+            </div>
+          </div>
+
+          <div class="evt">
+            <div class="evt-date">Jan 15<br><small style="font-weight:500">2026</small></div>
+            <div>
+              <strong>Levite 003</strong>
+              <div class="muted" style="font-size:0.9rem">Kaduna — Ecwa English Service Bagado</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="content">
+      <div class="wrap" style="padding:0">
+        <h2 style="color:var(--accent-2)">Gallery</h2>
+        <div class="gallery" style="margin-top:12px">
+          <img src="pic/1.jpeg" alt="gallery 1">
+          <img src="pic/dance.jpeg" alt="gallery 2">
+          <img src="pic/dance2.jpeg" alt="gallery 3">
+          <img src="pic/dance3.jpeg" alt="gallery 4">
+          <img src="pic/dance4.jpeg" alt="gallery 5">
+          <img src="pic/dance5.jpeg" alt="gallery 6">
+          <img src="pic/dance6.jpeg" alt="gallery 7">
+          <img src="pic/ushers.jpeg" alt="gallery 8">
+        </div>
+        <div class="load">
+          <a href="images.html"><button style="color: aliceblue; border-radius: 20px; padding: 10px; 
+          background-color: rgb(41, 40, 40); margin-top: 20px; border: 0;"> -- Load More </button></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & JOIN -->
+    <section id="contact" class="content">
+      <div class="lrap" style="padding:0;display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:start">
+        <div>
+          <h2 style="color:var(--accent-2)">Contact</h2>
+          <p class="muted">For bookings, collaborations or media enquiries, send us a message.</p>
+
+          <form class="form" style="margin-top:12px" onsubmit="return submitContact(event)">
+            <input type="text" id="name" placeholder="Your name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <textarea id="message" placeholder="Message" rows="5" required></textarea>
+            <button class="submit">Send Message</button>
+          </form>
+        </div>
+
+        <div id="join">
+          <div class="card">
+            <h3>Join Us</h3>
+            <p class="muted">Interested in joining Levite Family? Fill this quick form and our team will contact you.
+            </p>
+            <form class="form" style="margin-top:12px" onsubmit="return submitJoin(event)">
+              <input type="text" id="jname" placeholder="Full name" required>
+              <input type="text" id="voice" placeholder="Voice (soprano / alto / tenor / bass) or instrument">
+              <input type="tel" id="phone" placeholder="Phone / WhatsApp">
+              <button class="submit">Apply</button>
+            </form>
+          </div>
+
+          <div
+            style="margin-top:12px;padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent)">
+            <h4 style="margin:0;color:var(--accent-2)">Manager</h4>
+            <div class="muted" style="margin-top:6px">virobotics — vicsteve2002@gmail.com</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="yr">2025</span> Levite Family • All rights reserved</div>
+    </footer>
+  </div>
+
+  <script>
+    // Set current year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Smooth scrolling for nav
+    document.querySelectorAll('nav a').forEach(a => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // Stage mouse parallax and slight tilt
+    const stage = document.getElementById('stageInner');
+    (function () {
+      const root = document.querySelector('.stage');
+      let lastX = 0, lastY = 0;
+      root.addEventListener('mousemove', (e) => {
+        const r = root.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        const rotY = x * 18; // yaw
+        const rotX = -y * 12; // pitch
+        stage.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg) translateZ(0)`;
+      });
+      root.addEventListener('mouseleave', () => { stage.style.transform = '' });
+    })();
+
+    // Simple form handlers (demo-only, replace with real endpoint)
+    function submitContact(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      alert(`Thank you ${name}!\nWe received your message and will reach out to ${email}.`);
+      e.target.reset();
+      return false;
+    }
+    function submitJoin(e) {
+      e.preventDefault();
+      const name = document.getElementById('jname').value.trim();
+      alert(`Thanks ${name}!\nOur team will contact you about joining.`);
+      e.target.reset();
+      return false;
+    }
+
+    // Small accessibility: allow keyboard focus visible styles
+    document.body.addEventListener('keydown', function () { document.documentElement.classList.add('keyboard-nav') });
+
+    // Countdown for upcoming program (reads target from data-target on #countdownCard)
+    (function () {
+      const card = document.getElementById('countdownCard');
+      if (!card) return;
+      const targetAttr = card.getAttribute('data-target');
+      let targetDate = targetAttr ? new Date(targetAttr) : new Date('2025-12-30T10:00:00');
+
+      const daysEl = document.getElementById('cdDays');
+      const hoursEl = document.getElementById('cdHours');
+      const minsEl = document.getElementById('cdMins');
+      const secsEl = document.getElementById('cdSecs');
+      const statusEl = document.getElementById('cdStatus');
+
+      // declare ticker so update can safely call clearInterval even on first run
+      let ticker;
+
+      function update() {
+        const now = new Date();
+        const diff = targetDate - now;
+        if (isNaN(targetDate.getTime())) {
+          statusEl.textContent = 'Invalid target date';
+          return;
+        }
+
+        if (diff <= 0) {
+          statusEl.textContent = 'Event started';
+          daysEl.textContent = '0'; hoursEl.textContent = '0'; minsEl.textContent = '0'; secsEl.textContent = '0';
+          if (ticker) clearInterval(ticker);
+          return;
+        }
+
+        const sec = Math.floor(diff / 1000) % 60;
+        const min = Math.floor(diff / (1000 * 60)) % 60;
+        const hr = Math.floor(diff / (1000 * 60 * 60)) % 24;
+        const day = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+        daysEl.textContent = day;
+        hoursEl.textContent = String(hr).padStart(2, '0');
+        minsEl.textContent = String(min).padStart(2, '0');
+        secsEl.textContent = String(sec).padStart(2, '0');
+      }
+
+      update();
+      ticker = setInterval(update, 1000);
+    })();
+
+    // add hamburger toggle behavior
+    (function () {
+      const wrap = document.getElementById('mainNavWrap');
+      const toggle = document.getElementById('navToggle');
+      const nav = document.getElementById('mainNav');
+
+      if (!wrap || !toggle || !nav) return;
+
+      function closeMenu() {
+        wrap.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
+      }
+      function openMenu() {
+        wrap.classList.add('open');
+        toggle.setAttribute('aria-expanded', 'true');
+        toggle.setAttribute('aria-label', 'Close menu');
+      }
+
+      toggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (wrap.classList.contains('open')) closeMenu(); else openMenu();
+      });
+
+      // close when clicking a nav link (mobile)
+      nav.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          if (window.innerWidth <= 720) closeMenu();
+        });
+      });
+
+      // close on outside click
+      document.addEventListener('click', (e) => {
+        if (!wrap.classList.contains('open')) return;
+        if (!wrap.contains(e.target)) closeMenu();
+      });
+
+      // close on resize to larger screens
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 720) closeMenu();
+      });
+
+      // keyboard: ESC closes
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeMenu();
+      });
+    })();
+  </script>
+</body>
+
+</html>
